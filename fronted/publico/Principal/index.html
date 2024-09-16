@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Bingo</title>
+    <link href="/fronted/publico/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="./fondo.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./logoSuperBingo.png">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h2>Cargando Super Bingo...</h2>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <video id="background-video" autoplay loop muted>
+        <source src="./img/fondo login.mp4" type="video/mp4">
+        
+    </video> 
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/fronted/publico/Principal/index.html"><img src="/fronted/publico/inicioSesion/logoSuperBingo.png" class="logo"alt= "">SuperBingo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                   
+                    <a class="nav-link" href="/fronted/publico/inicioSesion/login.html">Iniciar sesión</a>
+                    <a class="nav-link" href="/fronted/publico/inicioSesion/Registro/loginRegistro.html">Registrarse</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4 mt-lg-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <div class="card comic-panel">
+                    <div class="card-body">
+                        <h2 class="card-title text-center mb-4">¡Bienvenidos al Super Bingo!</h2>
+                        <p class="card-text text-center">
+                            ¡Únete al Super Bingo, una experiencia emocionante y divertida que puedes disfrutar desde casa! Este juego clásico con un toque moderno te ofrece la oportunidad de ganar premios increíbles con cada número que se canta.
+                             No pierdas la oportunidad de ser parte de esta divertida comunidad y de ganar grandes premios.
+                             ¡Comienza a jugar y disfruta de momentos inolvidables en el Super Bingo!
+                        </p>
+                        <div class="text-center">
+                            <a href="/fronted/publico/inicioSesion/iniciarsecion/login.html"><button  class=" btn-primary" id="letra">Comenzamos</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img src="./img/Super Bingo.png" alt="Superhero" class="superhero">
+    <script src="/fronted/publico/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

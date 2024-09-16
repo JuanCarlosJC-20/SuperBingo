@@ -1,0 +1,122 @@
+body {
+    background-image: url('./IMG/fondo\ home.jfif'); /* Background image of space with asteroids */
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+.inventory-container {
+    background-color: #f0f0f0;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    margin:auto;
+    margin-top: 200px;
+    width: 90%;
+    height: 60%;
+    max-width: 9000px;
+    
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+.header img {
+    border-radius: 50%;
+}
+.header .user-info {
+    display: flex;
+    align-items: center;
+}
+.header .user-info img {
+    margin-right: 10px;
+}
+.header .user-info .username {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.header .user-info .user-id {
+    font-size: 1rem;
+}
+.header .inventory-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.sidebar {
+    background-color: yellowgreen;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    width: 10%;
+    flex-wrap: nowrap;
+    
+}
+.sidebar .nav-item {
+    padding: 10px;
+    cursor: pointer;
+}
+.sidebar .nav-item.active {
+    background-color: rgb(17, 17, 17);
+}
+.sidebar .nav-item:hover {
+    background-color: rgb(0, 255, 255);
+}
+.sidebar .cart-icon {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.content .avatars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.content .avatars img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.content .avatars img:hover {
+    border: 2px solid #00f;
+}
+.content .avatar-preview {
+    width: 300px;
+    height: 300px;
+    background-image: url('https://placehold.co/300x300'); /* Placeholder for avatar preview */
+    background-size: cover;
+    border-radius: 10px;
+}
+.section {
+    display: none;
+}
+.section.active {
+    display: block;
+}
+@media (max-width: 768px) {
+    .inventory-container {
+        width: 100%;
+        padding: 10px;
+    }
+    .header .inventory-title {
+        font-size: 1.5rem;
+    }
+    .content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .content .avatar-preview {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+}

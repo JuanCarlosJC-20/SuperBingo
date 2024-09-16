@@ -1,0 +1,63 @@
+<html></html>
+<head>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./inventario.css">
+</head>
+<body>
+
+    <div class="inventory-container">
+        <div class="header">
+            <div class="user-info">
+                <img alt="User avatar" height="50" src="./IMG/perfil de usuario.gif" width="50"/>
+                <div>
+                    <div class="username">pepitojuan08</div>
+                    <div class="user-id">ID: 1086076</div>
+                </div>
+            </div>
+            <div class="inventory-title">Inventario</div>
+        </div>
+        <div class="d-flex mt-3">
+            <div class="sidebar">
+                <div class="nav-item active" onclick="showSection('avatars')">Avatar <span class="badge bg-primary">7</span></div>
+                <div class="nav-item" onclick="showSection('fondo')">Fondo</div>
+                <div class="nav-item" onclick="showSection('cartones')">Cartones</div>
+                <div class="nav-item" onclick="showSection('marcador')">Marcador</div>
+                <div class="nav-item" onclick="showSection('pinceles')">Pinceles</div>
+                <div class="nav-item" onclick="showSection('objetos')">Objetos</div>
+                <div class="cart-icon"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+            <div class="content">
+                <div id="avatars" class="section active">
+                    <div class="avatars">
+                        <img alt="Avatar 1" src="./IMG/caja de regalo sin abrir.gif"/>
+                        <img alt="Avatar 2" src="./IMG/inventario.png"/>
+                        <img alt="Avatar 3" src="./IMG/Super Bingo.png"/>
+                        <img alt="Avatar 4" src="avatar4.png"/>
+                        <img alt="Avatar 5" src="avatar5.png"/>
+                        <img alt="Avatar 6" src="avatar6.png"/>
+                        <img alt="Avatar 7" src="avatar7.png"/>
+                    </div>
+                    <div class="avatar-preview"></div>
+                </div>
+                <div id="fondo" class="section">
+                    <p>Fondo section content...</p>
+                </div>
+                <div id="cartones" class="section">
+                    <p>Cartones section content...</p>
+                </div>
+                <div id="marcador" class="section">
+                    <p>Marcador section content...</p>
+                </div>
+                <div id="pinceles" class="section">
+                    <p>Pinceles section content...</p>
+                </div>
+                <div id="objetos" class="section">
+                    <p>Objetos section content...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./inventario.js"></script>
+</body>
+</html>

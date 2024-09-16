@@ -1,0 +1,348 @@
+*{
+    font-family: 'Bangers', cursive;
+}
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-content {
+    text-align: center;
+    color: #fff;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 3px solid #000;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background-color: #ffc107;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+
+/* Estilo para la imagen del "Super Bingo" */
+.superBingoCp {
+    position: absolute; 
+    left: 0%; 
+    width: 100%; 
+    max-width: 590px; /* Ancho máximo de la imagen */
+    bottom: 0%; 
+}
+
+/* Estilo del login */
+.login-container {
+    background-color: transparent; /* opacidad */
+    padding: 30px 40px; 
+    border-radius: 15px;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    width: 360px;
+    font-family: 'Comic Sans MS', sans-serif;
+    margin-left: 50%;
+}
+
+/* Estilo para las etiquetas*/
+.login-container label {
+    position: absolute;
+    display: block; 
+    font-size: 24px; 
+    margin-top: -10px; 
+    color: #000000; 
+}
+
+/* Estilo para los campos  de texto y contraseña */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%; 
+    padding: 5px; 
+    margin: 20px 0; 
+    border-radius: 15px; 
+    border: 2px solid #ffffff;
+    box-sizing: border-box; 
+    background-color: transparent; 
+    color: #000000; 
+    font-size: 16px; 
+}
+
+/* estilo fondo de login*/
+.login-container input[type="text"]::placeholder,
+.login-container input[type="password"]::placeholder {
+    color: #000000; 
+}
+
+/* Estilo para el botón de iniciar */
+.login-container input[type="submit"]:hover {
+    background-color: #e6c200; 
+    transform: translateY(-3px);
+}
+
+/* Efecto de botones */
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+    outline: none; 
+    border-color: #eaff00;
+    background-color: transparent; 
+}
+
+/* Efecto del inisio*/
+.login-container input[type="submit"]:focus {
+    outline: none;
+}
+
+/* Estilo para el texto de "Olvidaste tu contraseña" */
+.forgot-password {
+
+    font-size: 12px; 
+    color: #000000; 
+    margin-top: -8px;
+    cursor: pointer; 
+    margin-left: 100px;
+}
+
+/* Estilo para el texto de "¿No tienes una cuenta?  Registrate aqui." */
+.orgot-password{
+    font-size: 14px; 
+    color: #000000; 
+    margin-top: 8px;
+    cursor: pointer; 
+    margin-left: 8px;
+}
+
+/* Estilo para el texto de "¿No tienes una cuenta?  Registrate aqui." al pasar el cursor sobre él */
+.orgot-password{
+    text-decoration: underline; /*efecto de Subraya el texto */
+}
+
+/* Estilo para el texto de "Olvidaste tu contraseña" al pasar el cursor sobre él */
+.forgot-password:hover {
+    text-decoration: underline; /*efecto de Subraya el texto */
+}
+
+/* Estilo para el botón de registrar */
+.login-container .register-btn {
+    width: 100%; 
+    padding: 8px; 
+    margin-top: 20px; 
+    border-radius: 25px; 
+    background-color: #FFD700;;
+    color: #000000; 
+    font-size: 18px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease;/*efecto*/
+    border: none; 
+    box-shadow: 10px 8px 16px rgba(0, 0, 0, 1 ); /* Sombra*/
+}
+
+/* Estilo para el botón de registrar al pasarsobre el */
+.login-container .register-btn:hover {
+    background-color: #e6c200; 
+    transform: translateY(-3px); /* Efecto de boton registrarse*/
+}
+
+/* Estilo para el botón de registraral pasar sobre el*/
+.login-container .register-btn:focus {
+    outline: none; 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* ajuste de fondo */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/*ajuste de posicion sobre fondo*/
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 0.8em;
+}
+
+/*logo superbingo*/
+.logo{
+    width: 100%;
+    max-width: 200px;
+    filter: drop-shadow( 0px 0px 20px #fbff07);
+    animation: jump 1.5s infinite ease-in-out;/*ecfeto imagen logo */
+}
+
+/*animacion de "logo super bingo"*/
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+#colores{
+    background-color: #fbff07;
+    border-color: #000;
+    color: #000;
+    font-weight: bold;
+    padding: 0px 30px;
+    font-size: 1.5em;
+    box-shadow: 3px 3px 0px #000;
+    transition: all 0.2s ease;
+    border-radius: 12%;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 0.15em;
+}
+
+#colores:hover {
+    background-color: #f8d71c;
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px #000;
+}
+
+#letras{
+    font-family: 'Bangers', cursive;
+    letter-spacing: 0.08em;
+}
+
+.letra{
+    
+    font-family: 'Bangers', cursive;
+    letter-spacing: 0.05em;
+
+}
+
+#olvidaste{
+    font-size: small;
+    position: right;
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para el contenedor de carga */
+    .progress-bar {
+        width: 90%;
+        max-width: 250px;
+    }
+
+    /* Ajustes para el contenedor de login */
+    .login-container {
+        padding: 30px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Ajustes de los textos y botones */
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    .login-container label {
+        font-size: 18px;
+    }
+
+    .login-container input[type="submit"],
+    .login-container .register-btn {
+        font-size: 16px;
+        padding: 6px;
+    }
+
+    .forgot-password {
+        margin-left: 0;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    #colores {
+        font-size: 1.2em;
+        padding: 8px 20px;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+}
+
+/* Media Queries para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .login-container label {
+        font-size: 16px;
+    }
+
+    .login-container input[type="submit"],
+    .login-container .register-btn {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .forgot-password {
+        font-size: 9px;
+    }
+
+    .logo {
+        max-width: 80px;
+    }
+
+
+    /* Ocultar el muñeco "Super Bingo" en pantallas muy pequeñas */
+    .superBingoCp {
+        display: none;
+    }
+}

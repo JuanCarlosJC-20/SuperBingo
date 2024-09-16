@@ -1,0 +1,365 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Bangers', cursive;
+    background: url('./IMG/fondo1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+   cursor:url("./IMG/puntero-azul-.png"),auto;
+}
+
+.overlay {
+    background: rgba(255, 255, 255, 0.1);
+    height: 100%;
+    width: 100%;
+}
+
+.d{
+    background-color: #00000069;
+}
+
+.icono {
+    width: 50px;
+    height: 50px;
+}
+
+/* Contenedor del logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 40px; /* Espacio alrededor del logo si es necesario */
+}
+
+.perfil{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid #000;
+}
+
+/* Estilo para la imagen del logo */
+.logo {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    width: 300px;  /* Mantiene la proporción de la imagen */
+    filter:drop-shadow(1px 1px 20px rgb(255, 154, 1));
+    margin-top: -70px;
+    
+}
+
+.social {
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Ajuste del container-fluid con transparencia */
+.container-fluid {
+    margin-top: 95px;
+    width: 80%;
+  
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.8); /* Añadir transparencia */
+    border: 5px solid black;
+    border-radius: 20px;
+}
+.config-logo {
+    position: absolute;
+    font-size: 45px;
+}
+/* Contenedor de ambos engranajes */
+.gears-container {
+    position: relative;
+    left: 95%; /* Ajustar a un valor central */
+    top: 40%;
+    transform: translate(-50%, -50%); /* Centrar el contenedor */
+    width: 80px;
+    height: 150px;
+}
+
+
+
+/* Primer engranaje (naranja) */
+.gear1 {
+    color: #f57c00;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotate 4s infinite linear;
+}
+
+/* Segundo engranaje (amarillo) */
+.gear2 {
+    color: #ffca28;
+    right: 0;
+    top: 30%;
+    transform: translateY(-50%);
+    animation: rotate 4s infinite linear reverse;
+}
+
+/* Animación de rotación */
+@keyframes rotate {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+@media (max-width: 1600px) {
+
+    .game-button {
+        font-size: 15px;
+        padding: 15px 20px;
+        margin-bottom: 40px;
+    }
+    .icono {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logoT {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 50%;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .container-fluid {
+        margin-bottom: auto;
+        width: 80%;
+        padding: 10px;
+    }
+
+   
+
+    .config-logo {
+        font-size: 40px; /* Ajustar tamaño de los engranajes */
+    }
+
+}
+
+
+
+/* Responsividad para pantallas móviles */
+@media (max-width: 768px) {
+
+ 
+        .game-button {
+            font-size: 15px;
+            padding: 15px 20px;
+            margin-bottom: 40px;
+        }
+    
+    .icono {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logoT {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 500px;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .container-fluid {
+        margin-top: 150px;
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+        margin-bottom: auto;
+    }
+
+   
+
+    .config-logo {
+        font-size: 35px; /* Ajustar tamaño de los engranajes */
+    }
+}
+
+
+@media (max-width: 576px) {
+    .logoT {
+        width: 80px;
+        height: 80px;
+    }
+
+    .social-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .container-fluid {
+        margin-top: 60px;
+        margin-bottom: auto;
+        width: auto;
+        height: auto;
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.8); /* Aumentar transparencia para pantallas más pequeñas */
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .gears-container {
+        width: 50px; /* Ajustar tamaño para pantallas muy pequeñas */
+        height: 100px; /* Ajustar altura para pantallas muy pequeñas */
+    }
+
+    .config-logo {
+        font-size: 25px; /* Ajustar tamaño de los engranajes */
+    }
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+
+
+
+
+/* Estilo para los botones */
+.r{
+    background-color: red;
+}
+.v{
+    background-color: green;
+}
+.z{
+    background-color: blue;
+}
+.g{
+    background-color: #b6a2a2;
+}
+
+
+.game-button{
+   
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 18px 25px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+
+}
+
+
+/* Efecto al pasar el mouse sobre el botón */
+.game-button:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto al hacer clic en el botón */
+.game-button:active {
+    transform: scale(0.95);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividad de los botones */
+@media (max-width: 400px) {
+    .game-button {
+        font-size: 15px;
+        padding: 15px 20px;
+    }
+}
+@media (max-height: 400px) {
+    .game-button {
+        font-size: 15px;
+        padding: 15px 20px;
+    }
+}
+
+
+.a{
+    background-color: transparent;
+    border: transparent;
+}
+
+.y{
+    background-color:  transparent;
+    border: none;
+}
+
+/* perfil de usuario estilos*/
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+    
+    
+}
+
+.profile-dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #00000069;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.profile-dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 5px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.profile-dropdown-content a:hover {background-color: #caab43}
+
+.profile-dropdown:hover .profile-dropdown-content {
+    display: block;
+}
+
+.profile-dropdown:hover .dropbtn {
+    background-color: #b66c49;
+}
+
+.container{
+    margin-left: -35px;
+    margin-top: -10px;
+}
+
+.redes{
+   margin-top: 5%;
+   margin-left: 41%;
+   gap: 70px;
+    display: flex;
+
+}
+@media (orientation:portrait){
+    .redes{
+        display: none;
+    }
+}
