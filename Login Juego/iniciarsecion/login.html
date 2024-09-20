@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>superBingo</title>
+    <link href="/fronted/publico/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./img/logoSuperBingo.png">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h2>Cargando Super Bingo...</h2>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <video autoplay muted loop id="background-video">
+        <source src="./img/fondo login.mp4" type="video/mp4">
+    </video>
+    
+    <div class="content">
+        <div class="login-container">
+            <img src="./img/logoSuperBingo.png" class="logo" alt="">
+            <label for="username" class="letra">Usuario</label>
+            <input type="text" id="username" name="username" placeholder="Ingresa tu usuario">
+            
+            <label for="password" class="letra">Contraseña</label>
+            <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña">
+    
+           <a href="/fronted/publico/inicioSesion/verificasion @/index.html"> <p class="forgot-password" id="olvidaste">¿Olvidaste tu contraseña?</p> </a>
+
+           <a href="#" id="submit-link"> 
+            <input id="colores" type="submit" value="Iniciar">
+        </a>
+            
+             <a href="/fronted/publico/inicioSesion/Registro/loginRegistro.html"> <div class="orgot-password">
+                <p>¿No tienes una cuenta?  Registrate aquí.</p>
+            </div>   
+        </div>
+    </div>
+
+    <img src="./img/Super Bingo.png" class="superBingoCp" alt="">
+
+    <!-- Modal (pantalla emergente) -->
+    <section class="modal">
+        <div class="modal-conteiner">
+            <a href="#" class="closeModal">Entendido</a>
+            <img src="./img/viñetaModal.jpg" class="viñeta-modal" alt="viñeta modal">
+            <h3>La contraseña que ingresaste es incorrecta.</h3>
+            <p class="text">Vuelve a intentarlo</p>
+        </div>
+        <img src="./img/superBingoAlbertencia.png" class="superBingoAlbertencia" alt="">
+    </section>
+
+    <script src="/fronted/publico/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./login.js"></script>
+</body>
+</html>

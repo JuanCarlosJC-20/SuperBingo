@@ -1,0 +1,232 @@
+/* Estilos generales */
+* {
+    font-family: 'Bangers', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Fondo de video */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Estilo del contenido sobre el fondo */
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: black;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Estilo del login */
+.login-container {
+    background-color: transparent;
+    padding: 30px 40px;
+    border-radius: 15px;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    width: 360px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Estilos del logo de Super Bingo */
+.logo {
+    width: 100%;
+    max-width: 200px;
+    filter: drop-shadow(0px 0px 20px #fbff07);
+    animation: jump 1.5s infinite ease-in-out;
+}
+
+/* Efecto de salto del logo */
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Pantalla de carga */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-content {
+    text-align: center;
+    color: #fff;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 3px solid #000;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: #ffc107;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+/* Estilo de la imagen de Super Bingo */
+.superBingoCp {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 590px;
+}
+
+/* Estilos de campos de entrada */
+.login-container label {
+    font-size: 24px;
+    color: #000;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 5px;
+    margin: 6px 0;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #000;
+    font-size: 16px;
+}
+
+#colores {
+    background-color: #fbff07;
+    border-color: #000;
+    color: #000;
+    font-weight: bold;
+    padding: 0 30px;
+    font-size: 1.5em;
+    box-shadow: 3px 3px 0px #000;
+    transition: all 0.2s ease;
+    border-radius: 12%;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 0.15em;
+}
+
+#colores:hover {
+    background-color: #f8d71c;
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px #000;
+}
+
+/*estilos de la img"logo superBingo"*/
+#Gamelogo{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+h2{
+    text-align: center;
+}
+
+
+
+/* Pantalla emergente */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 38px;
+    display: flex;
+    margin-top: -20px;
+   
+    justify-content: end;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .logo {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .superBingoCp {
+        display: none;
+    }
+
+    .login-container input {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .login-container {
+        width: 400px;
+    }
+
+    .logo {
+        max-width: 250px;
+    }
+}
