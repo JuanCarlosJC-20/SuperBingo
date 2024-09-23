@@ -3,35 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>superBingo</title>
+    <title>superBingo</title> 
     <link href="/fronted/publico/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="./Home.css">
-    <link rel="icon" type="image/png" href="./IMG/logoSuperBingo.png">
+    <link rel="icon" type="image/png" href="./IMG/logoSuperBingo-mejorado.png">
 </head>
 <body>
-            <div class="d-flex justify-content-between p-3">
                <!-- el contenedro de perfil-->
-                
-                <div class="container ">
-                    
-                    <div class="profile-dropdown">
-                        <button class="btn y btn-primary dropdown-toggle dropbtn" type="button">
-                            <img class="perfil" src="./IMG/iconosupercat.jpg" class="rounded-circle" alt="Perfil"> PERFIL
-                        </button>
-                        <div class="profile-dropdown-content">
-                           <a href="/fronted/publico/perfil/perfil.html"> Ver Perfil</a>
-                            <a href="#">Tabla posiciones</a>
-                            <a href="#">Ver lista amigos</a>
+                    <div class="container">
+                        <div class="containerImg">
+                        <img src="./IMG/iconosupercat.jpg" alt="Gato Superhéroe" class="profile-img" onclick="toggleMenu()">
                         </div>
-                      
+                        <div class="menu" id="menu">
+                            <div class="menu-item">Ver perfil</div>
+                            <div class="menu-item">Tabla de posiciones</div>
+                            <div class="menu-item">Ver lista de amigos</div>
+                        </div>
                     </div>
-
+                    </div>
+               
                     <button class="btn y dropbtn" type="button">
-                       <a href="/fronted/publico/inventario/inentario.html"><img src="./IMG/inventario.png" class="rounded-circle" alt="Perfil"></a> 
+                       <a href="/fronted/publico/inventario/inentario.html"><img class="inventario" src="./IMG/inventario.png" class="rounded-circle" alt="Perfil"></a> 
                     </button>
                     <button class="btn y dropbtn" type="button">
-                    <img src="./IMG/caja de regalo sin abrir.gif" class="rounded-circle" alt="Perfil">
+                    <img src="./IMG/regalo.png" class="regalito" alt="Perfil">
                     </button>
                 </div>
                
@@ -55,7 +51,7 @@
             </div>
             
             <div class="logo-container">
-                <img src="./IMG/logoSuperBingo.png" alt="Logo" class="logo">
+                <img src="./IMG/logoSuperBingo-remejorado.png" alt="Logo" class="logo">
             </div>
             
             <div class="button-container">
@@ -68,7 +64,7 @@
             </div> 
             
             
-    </div>
+   
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
