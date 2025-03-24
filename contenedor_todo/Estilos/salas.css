@@ -1,0 +1,142 @@
+*{
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Bangers', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('../Multimedia/img/fondoo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.container {
+    background-image: url('../Multimedia/img/fondoGRIS.jpg');
+    background-size: cover;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 900px;
+    width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-height: 400px;
+}
+
+.header {
+    background-image: url('../Multimedia/img/fondoRojo.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 15px 15px 0 0;
+    font-size: 24px;
+}
+.y {
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: transparent;
+}
+
+/* Botones */
+.comic-button {
+    font-family: 'Bangers', cursive;
+    display: inline-block;
+    padding: 6px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #ff0000;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 30px;
+}
+
+.comic-button:hover {
+    background-color: #ff0000;
+    color: #000000;
+    border: 2px solid #000000;
+    box-shadow: 5px 5px 0px #000000;
+}
+
+.comic-button:active {
+    background-color: #fc1414;
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+.comic-button2 {
+    font-family: 'Bangers', cursive;
+    display: inline-block;
+    position: fixed;
+    padding: 6px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #ff0000;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    left: 460px;
+}
+
+.comic-button2:hover {
+    background-color: #ff0000;
+    color: #000000;
+    border: 2px solid #000000;
+    box-shadow: 5px 5px 0px #000000;
+}
+
+.comic-button2:active {
+    background-color: #fc1414;
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Media Queries para pantallas más pequeñas en horizontal */
+@media (max-width: 999px) and (orientation: landscape) {
+    .container {
+        width: 450px; /* Ajusta el tamaño del contenedor */
+        max-width: 100%; /* Que ocupe el ancho máximo disponible */
+        min-height: 53vh; /* Reduce la altura mínima para pantallas en horizontal */
+    }
+
+    .comic-button {
+        padding: 8px 10px; /* Ajusta el padding de los botones */
+        font-size: 16px; /* Aumenta el tamaño de la fuente */
+        margin: 5px; /* Reduce el margen */
+    }
+
+    .header {
+        font-size: 20px; /* Ajusta el tamaño del texto en encabezado */
+        padding: 15px;
+    }
+
+    .comic-button2 {
+        left: 250px;
+    }
+}

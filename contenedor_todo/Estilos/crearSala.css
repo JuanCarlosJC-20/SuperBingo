@@ -1,0 +1,156 @@
+*{
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Bangers', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('../Multimedia/img/fondoo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+.container {
+    background-image: url('../Multimedia/img/fondoGRIS.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 20px;
+    width: 800px;
+    margin-top: 10%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 400px; /* Agregado para asegurar altura mínima */
+}
+.header {
+    background-image: url('../Multimedia/img/fondoRojo.png');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.profile img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.profile span {
+    font-size: 18px;
+    font-weight: bold;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-control {
+    border-radius: 10px;
+}
+.comic-button {
+    font-family: 'Bangers', cursive;
+    display: inline-block;
+    padding: 6px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #ff0000;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 30px;
+    width: 80px; /* Mantener el ancho de 100px */
+
+}
+
+.comic-button:hover {
+    background-color: #ff0000;
+    color: #000000;
+    border: 2px solid #000000;
+    box-shadow: 5px 5px 0px #000000;
+}
+
+.comic-button:active {
+    background-color: #fc1414;
+    box-shadow: none;
+    transform: translateY(4px);
+}
+.btn-create {
+    font-family: 'Bangers', cursive;
+    display: inline-block;
+    padding: 6px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff; /* Color del texto en blanco */
+    background-color: #28a745; /* Color de fondo verde */
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 30px;
+    width: 80px; /* Mantener el ancho de 100px */
+}
+
+.btn-create:hover {
+    background-color: #218838; /* Color verde oscuro al hacer hover */
+    color: #000000; /* Cambia el color del texto a negro */
+    border: 2px solid #000000;
+    box-shadow: 5px 5px 0px #000000;
+}
+
+.btn-create:active {
+    background-color: #1e7e34; /* Color más oscuro al hacer click */
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+@media (max-width: 999px) and (orientation: landscape) {
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.header {
+    width: 400px;
+    top: 10px;
+}
+
+.container {
+    width: 450px; /* Ajusta el tamaño del contenedor */
+    height: 302px; /* Ajusta la altura */
+    font-size: 10px;
+    margin: 10px 0; /* Espacio de 10px arriba y abajo */
+    display: flex;
+    flex-direction: column; /* Alinea elementos verticalmente */
+    align-items: center; /* Centra los elementos dentro del contenedor */
+    justify-content: center; /* Centra en el eje vertical */
+}
+
+.btn-create,
+.comic-button {
+    margin: 10px; /* Espacio entre botones */
+}
+}

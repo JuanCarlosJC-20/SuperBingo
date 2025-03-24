@@ -1,0 +1,1167 @@
+*{
+
+    background-color:  #fff;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+body{
+    overflow: hidden; /* Quita el scroll */
+}
+
+.contenedor{
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    flex-wrap: nowrap;
+}
+
+.encimado{
+    border: solid 10px #fff ;
+}
+
+.encimado2{
+    display: none;
+}
+
+/* Estilo general del contenedor de la tarjeta de bingo */
+.bingo-card {
+    display: flex; /* Coloca las letras en una fila */
+    justify-content: space-between; /* Espacio entre las letras */
+    align-items: center; /* Centra verticalmente las letras */
+    width: 100%; /* Ancho total de la tarjeta */
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
+}
+
+/* Estilos específicos para cada letra del encabezado "BINGO" */
+.bingo-card .header {
+    display: inline-block; /* Asegura que cada letra sea un bloque independiente */
+    text-align: center; /* Centra el texto dentro del bloque */
+    font-size: 40px; /* Ajusta el tamaño de la letra aquí */
+    padding: 5px; /* Ajusta el espacio dentro de cada bloque */
+    margin: 0 5px; /* Controla el espacio entre cada letra */
+    background-color: #e3e3e3; /* Color de fondo para cada letra */
+    border: 2px solid #333; /* Borde de cada bloque */
+    border-radius: 8px; /* Bordes redondeados */
+    width: 60px; /* Controla el ancho de cada bloque */
+    height: 60px; /* Controla la altura de cada bloque */
+    line-height: 60px; /* Asegura que las letras estén centradas verticalmente */
+}
+.cartones{
+    border: 3px solid rgb(0, 0, 0);
+    width: 63%;
+    height: 37.5rem;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/*encabezado de donde se genera  los cartones*/
+.detalles{
+    position: absolute;
+    height: 70px;
+    width: 62.77%;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.persona{  
+    position: absolute; 
+    width: 101px;
+    border: solid 2px #000;
+    border-radius: 5px;
+    margin-left: 130px;
+    margin-top: 18px;
+}
+
+/*estilo del logo del jugador*/
+.avatar{
+    width: 60px;
+    height: 60px;
+    border: solid 1px #000;
+    border-radius: 50%;
+    margin-left: 50px;
+    margin-top: 5px;
+    background-image: url('../Multimedia/img/iconosupercat.jpg');
+    background-size: cover;
+}
+/*boton salir de partida*/
+.comic-button {
+    display: inline-block;
+    padding: 6px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff5252;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position:relative;
+    margin-left: 760px;
+    bottom: 50px ;
+  }
+  
+  .comic-button:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: 2px solid #ff5252;
+    box-shadow: 5px 5px 0px #ff5252;
+  }
+  
+  .comic-button:active {
+    background-color: #fc1414;
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+
+  a {
+    background-color: transparent;
+    color: #ffffff; /* Hereda el color del contenedor padre */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+a:hover {
+    color: inherit; /* Opcional: Mantiene el color cuando el ratón pasa por encima */
+}
+   
+  /*boton bingo */
+  .comic-button2 {
+    display: inline-block;
+    padding: 6px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1eff00;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position:relative;
+    margin-left: 920px;
+    bottom: 84px ;
+  }
+  
+  .comic-button2:hover {
+    background-color: #1eff00;
+    color: #ffffff;
+    border: 2px solid #1eff00;
+    box-shadow: 5px 5px 0px #1eff00;
+  }
+  
+  .comic-button2:active {
+    background-color: #1eff00;
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+  
+
+
+h6{  
+    position: absolute; 
+    width: 200px;
+    height: 48px;
+    border: solid 2px #000;
+    border-radius: 5px;
+    margin-left: 410px;
+    margin-top:-55px;
+}
+
+.bingo-card {
+    display: grid;
+    grid-template-columns: repeat(5, 70px);
+    grid-template-rows: 60px repeat(5, 65px);
+    background-image: url('../Multimedia/img/xd.png');
+    background-size: cover;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    height: 380px;
+    border: rgb(0, 0, 0) solid 3px;
+    margin-top: 80px;
+
+}
+
+
+
+/* Estilo para las letras BINGO */
+.bingo-card .header {
+    width: 30px;
+    height: 30px;
+    background-color: twhite;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    font-weight: bold;
+    color: black;
+    margin: 0 2px;
+}
+
+/* Estilo para los números */
+.bingo-card .number {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.677);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Espacio libre en el centro */
+.bingo-card .free-space {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    background-image: url('../Multimedia/img/logoSuperBingo-remejorado.png'); 
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.generador{
+    border: 2px inset black;
+    width: 300px;
+    height: 300px;
+    border: solid;
+    margin: 10px;
+    right: 100px;
+}
+
+/* Contenedor principal de la bola de bingo */
+#bingoContainer {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 200px; /* Altura para el contenedor */
+    margin-top: 65px; /* Margen superior */
+    width: 290px;
+}
+
+/* Estilo de la bola de bingo */
+.bingo-ball {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #FF5733; /* Color de la bola */
+    display: flex;
+    align-items: center; /* Centrar contenido verticalmente */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    position: relative;
+    opacity: 1;
+    transition: opacity 1s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    border: solid #000 2px;
+}
+
+/* Estilo del círculo blanco en el medio */
+#circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white; /* Círculo blanco */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilo de la letra */
+.bingo-letter {
+    font-size: 24px;
+    font-weight: bold;
+    color: black; /* Color de la letra */
+    margin-bottom: 5px; /* Separación entre letra y número */
+}
+
+/* Estilo del número */
+.bingo-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: black; /* Color del número */
+}
+
+/* Mensaje de fin de números */
+#message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: red;
+}
+
+.img-bingo{
+    border: 2px inset black;
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+    position: absolute;
+    top: 333px;
+    right: 3px;
+}
+
+.number {
+    background-color: #FF5733; /* Cambia el color de fondo para imitar la bola */
+    color: white; /* Color del texto */
+    border-radius: 50%; /* Forma circular */
+    width: 30px; /* Ancho fijo */
+    height: 30px; /* Alto fijo */
+    display: flex;
+    align-items: center; /* Centrar texto verticalmente */
+    justify-content: center; /* Centrar texto horizontalmente */
+    margin-right: 5px; /* Espaciado entre números */
+    font-weight: bold; /* Negrita para el número */
+    top: 20px;
+}
+
+.h1{
+    bottom: -9px;
+    width: 577px;
+}
+.numeros2{
+   display: none;
+}
+
+.numeros{
+    border: 2px solid black;
+    width: 576px;
+    height: 270px;
+    bottom: 5px;
+    right: 10px;
+    position: absolute;
+    margin: 6px;
+}
+
+/* Estilo para números marcados */
+.marked-image {
+    position: absolute; /* Para que se posicione sobre el número */
+    width: 48px; /* Ajusta según el tamaño del número */
+    height: 50px; /* Ajusta según el tamaño del número */
+    z-index: 1; /* Para que esté sobre el número */
+    justify-content: center;
+    justify-items: center;
+    pointer-events: none; /* Para que no interfiera con los clics */
+    background: none;
+}
+
+
+h1{
+    background-color: rgba(230, 7, 7, 0.507);
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    display: flex;
+    position: flex;
+    margin-top: 0px; 
+    width: 300px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para los contenedores de letras y números */
+.b, .i, .n, .g, .o {
+    top: 10px;
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    margin-bottom: 10px; /* Espaciado entre filas */
+}
+
+.circle {
+    
+    border: 2px inset rgb(0, 0, 0);
+    width: 30px; /* Ajusta el tamaño del círculo */
+    height: 30px; /* Ajusta el tamaño del círculo */
+    background-color: red;
+    border-radius: 50%; /* Hace que el div sea un círculo */
+    display: flex;
+    align-items: center; /* Centra verticalmente el texto */
+    justify-content: center; /* Centra horizontalmente el texto */
+    color: rgb(0, 0, 0); /* Color de la letra */
+    font-size: 20px; /* Tamaño de la letra */
+    font-weight: bold; /* Estilo de la letra */
+}
+
+.bolitas {
+    
+    border: 2px inset rgb(0, 0, 0);
+    width: 30px; /* Ajusta el tamaño del círculo */
+    height: 30px; /* Ajusta el tamaño del círculo */
+    background-color: red;
+    border-radius: 50%; /* Hace que el div sea un círculo */
+    display: flex;
+    align-items: center; /* Centra verticalmente el texto */
+    justify-content: center; /* Centra horizontalmente el texto */
+    color: rgb(0, 0, 0); /* Color de la letra */
+    font-size: 20px; /* Tamaño de la letra */
+    font-weight: bold; /* Estilo de la letra */
+}
+
+.cuadro{
+    display: flex;
+    background-color: red;
+    width: 35px;
+    height: 30px;
+}
+
+/* Estilo para la imagen dentro del modal */
+.modal-image {
+    position: relative;
+    margin-top: 200px;
+    width: 100%;
+    max-height: 100vh; /* Para ajustar la altura de la imagen al 80% de la ventana */
+    height: auto; /* Mantener proporciones de la imagen */
+    width: auto; /* Mantener proporciones de la imagen */
+    background-color: transparent; /* Asegura que no haya ningún fondo detrás de la imagen */
+    border: none; /* Elimina cualquier borde adicional */
+    box-shadow: none; /* Quita cualquier sombra que pueda aparecer alrededor de la imagen */
+}
+
+/* Asegura que el modal se ajuste al contenido */
+.modal-content {
+    background-color: transparent;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid  transparent;
+    width: 60%; /* Ajusta el ancho del modal según lo que necesites */
+    max-width: 700px; /* Establece un ancho máximo para evitar que sea demasiado grande */
+    max-height: 90vh; /* Evita que el modal exceda el 90% de la altura de la ventana */
+    text-align: center;
+    overflow: hidden; /* Evita que el contenido cause scroll dentro del modal */
+}
+
+.chao{
+    left: 720px;
+    bottom: 470px;
+}
+/* Ajustes para asegurar que el modal cubra toda la pantalla y no cause scroll */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Deshabilita el scroll en el fondo mientras el modal esté visible */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo base para los botones del modal */
+.modal-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid #000;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    box-shadow: 5px 5px 0px #000;
+    background-color: transparent; /* Fondo transparente */
+}
+
+/* Estilo del botón de confirmación (Salir) */
+.modal-button-confirm {
+    background-color: #ff5252; /* Rojo para el botón de salir */
+}
+
+.modal-button-confirm:hover {
+    background-color: #ff0000; /* Rojo más intenso al hacer hover */
+    box-shadow: 5px 5px 0px #ff5252;
+}
+
+.modal-button-confirm:active {
+    transform: translateY(4px); /* Movimiento al hacer clic */
+}
+
+/* Estilo del botón de cancelar (Permanecer) */
+.modal-button-cancel {
+    background-color: #1eff00; /* Verde para cancelar */
+}
+
+.modal-button-cancel:hover {
+    background-color: #1aff00; /* Verde más claro al hacer hover */
+    box-shadow: 5px 5px 0px #1eff00;
+}
+
+.modal-button-cancel:active {
+    transform: translateY(4px); /* Movimiento al hacer clic */
+}
+
+/* Contenedor para alinear los botones */
+.modal-buttons {
+    position: fixed;
+    bottom: 75px;
+    left: 9px;
+    text-align: center;
+    background-color: transparent; /* Elimina cualquier fondo del contenedor */
+    padding: 20px 0; /* Espaciado arriba y abajo */
+    top: 480px;
+    left: 725px;
+}
+
+
+h2{
+    position: absolute;
+    width: 300px;
+    bottom: 30%;
+    left: 30%;
+}
+
+.vereficar{
+    display: none ;
+}
+
+#botNamesContainer {
+    background-color: #fc14148f;
+    position: absolute;
+    align-items: center; /* Centra los nombres horizontalmente */
+    margin-top: 20px; /* Espacio entre la tarjeta de Bingo y los nombres */
+    bottom: 5%;
+    left:  1.2%;
+}
+
+#botNamesContainer div {
+    background-color: transparent;
+    font-size: 15px; /* Tamaño de fuente para los nombres de los bots */
+    margin: 5px 0; /* Espaciado entre los nombres */
+}
+
+/* Estilos para el contenedor de los bots */
+.bot-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: -33px;
+    gap: 167px; /* Espacio entre los bots */
+}
+
+/* Estilos para cada bot */
+.bot-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilo para las imágenes de perfil */
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien */
+    border: 2px solid #ccc; /* Borde alrededor de la imagen */
+}
+
+/* Estilo para el nombre de los bots */
+.bot-name {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+  /*boton bingo */
+  .comic-button3 {
+    display: inline-block;
+    padding: 6px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #26ff00;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position:relative;
+    margin-left: 920px;
+    bottom: 84px ;
+  }
+  
+  .comic-button3:hover {
+    background-color: #26ff00;
+    color: #ffffff;
+    border: 2px solid #000000;
+    box-shadow: 5px 5px 0px #000000;
+  }
+  
+  .comic-button3:active {
+    background-color: #26ff00;
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+
+.comic-button3{
+    display: none;
+}
+
+.comic-button4{
+    display: inline-block;
+    padding: 6px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #26ff00;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position:relative;
+    margin-left: 920px;
+    bottom: 84px ;
+  }
+  
+  .comic-button4:hover {
+    background-color: #26ff00;
+    color: #ffffff;
+    border: 2px solid #000000;
+    box-shadow: 5px 5px 0px #000000;
+  }
+  
+  .comic-button4:active {
+    background-color: #26ff00;
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+
+ .modal-image2{
+    top: 50px;
+    width: 85%;
+    background-color: transparent;
+ }
+
+/*modal de cundo un jugador gana */
+  #modal-message{
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    bottom: 350px;
+    background-color: transparent;
+  }
+
+ .comic-button4{
+    margin-left: 25px;
+    bottom: 320px;
+ }
+
+ .textAlevertencia{
+    font-size: 3px;
+ }
+
+
+@media (min-width:1920px){
+
+    body {
+        overflow: hidden; /* Quita el scroll */
+        height: 100vh; /* Ajusta la altura si es necesario */
+        width: 100%; /* Asegúrate de que el ancho esté correctamente ajustado */
+    }
+
+    .cartones{
+        height: 43rem;
+    }
+    
+    .bingo-card {
+        margin-top: 100px;
+    }
+    
+    .generador{
+        height: 330px;
+    }
+
+    .img-bingo{
+        width: 325px;
+        height: 330px;
+    }
+
+    .numeros{
+        width: 660px;
+        right: 6px;
+        top: 698px;
+        height: 330px;
+    }
+
+    .circle{
+        margin-top:10px;
+    }
+}
+
+@media (max-width:999px){
+
+    body {
+        overflow: hidden; /* Quita el scroll */
+        height: 100vh; /* Ajusta la altura si es necesario */
+        width: 100%; /* Asegúrate de que el ancho esté correctamente ajustado */
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .generador {
+        position: fixed;
+        width: 250px; /* Hacer el generador más pequeño */
+        height: 230px;
+        right: 20px;
+        margin: 2px;
+        display: flex;
+        justify-content: center; /* Centrar contenido horizontalmente */
+        align-items: center; /* Centrar contenido verticalmente */
+        background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+        border: 3px solid #000;
+    }
+
+    h1 {
+        display: flex;
+        position: fixed;
+        font-size: 1em;
+        margin-bottom: 208px; 
+        width: 250px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bingo-ball {
+        border: solid #000 2px;
+        width: 150px; 
+        height: 150px; 
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    }
+
+    .encimado{
+        display: none;
+    }
+    .encimado2 {
+        display: flex;
+        position: fixed;
+        width: 40%;
+        height: 20%;
+        top: 10px; /* Fijado en la parte superior */
+        left: 50%; /* Posicionado en el centro */
+        transform: translateX(-50%); /* Centrado horizontalmente */
+        justify-content: center; /* Opcional: centrado interno */
+        align-items: center; /* Opcional: alinear contenido verticalmente */
+    }
+
+    .img-bingo{
+        top: 230px;
+        height: 165px;
+        margin-right: -4px;
+        height: auto;
+        clip-path: inset(0 0 50% 0); /* Recorta la mitad inferior */
+        object-fit: cover;
+    }
+
+    .cartones{
+        display: flex;
+        position:fixed;
+        width: 39.5%;
+        height: 72%;
+        margin-top: 10%;
+        margin-left: 29.2%;
+    }
+    
+    .detalles{ 
+        width: 100%;
+        height: 10vh;
+    }
+
+    .avatar{
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+    }
+
+    .persona{
+        font-size: 0.5em;
+        margin-left: 50px;
+        top: -5px;
+        width: 60px;
+        padding: 0.2em;
+    }
+    
+    h6{
+        margin-left: 130px;
+        width: 60px;
+        height: 20px;
+        font-size: 0.5em;
+        padding: 0.2em;
+        top: 62px;
+    }
+
+    .comic-button{
+        margin-left: 210px;
+        width: 80px;
+        height: 20px;
+        font-size: 0.5em;
+        padding: 0.2em;
+        border-radius: 4px;
+        top: -30px;
+    }
+
+    .comic-button2{
+        margin-left: 300px;
+        width: 60px;
+        height: 20px;
+        font-size: 0.5em;
+        padding: 0.2em;
+        border-radius: 4px;
+        top: -55px;
+    }
+
+
+    .bingo-card{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+        grid-template-rows: repeat(5, 1fr); /*filas*/ /*para q se organize en pantallas pequeñas*/
+        width: 146px;
+        height: 190px;
+        gap: 3px;
+        margin-top: 48px;
+    }
+
+    .bingo-card .number{
+        width: 20px;
+        height: 20px;
+        font-size: 0.5em;
+        gap: 3px;
+    }
+
+    .bingo-card .header {
+        font-size: 0.5em; /* Ajusta el tamaño de la letra en pantallas más pequeñas */
+        width: 10px; /* Ajusta el ancho en pantallas pequeñas */
+        height: 10px; /* Ajusta la altura en pantallas pequeñas */
+        margin: 0 2px;
+    }
+
+    #botNamesContainer div {
+        margin-left: 200px ;
+        font-size: 8px; /* Tamaño de fuente para los nombres de los bots */
+        margin: 2px 0; /* Espaciado entre los nombres */
+        background-color: transparent;
+    }
+    
+    #botNamesContainer{
+        background-color: #fc14148b;
+        width: 372px;
+        left: 284px;
+        bottom: 14px;
+    } 
+
+    .bot-container{
+        gap: 16px; /* Espacio entre los bots */
+        margin-bottom: 0px;
+    }
+
+    /* Estilo para las imágenes de perfil */
+    .profile-pic {
+        width: 20px;
+        height: 20px; 
+    }   
+
+    .bot-name{
+        padding: 1px;
+    }
+
+    .numeros{
+        display: flex;
+        position: fixed;
+        top: 5px;
+        left: 9px;
+        width: 260px;
+        height: 94vh;
+    }
+
+    .b, .i, .n, .g, .o {
+        display: unset;
+        margin: 0 10px;
+    }
+
+    .h1{
+        bottom: -190px;
+        width: 260px;
+    }
+
+    .bolitas{
+            border: 1px inset rgb(0, 0, 0);
+            width: 24px; /* Ajusta el tamaño del círculo */
+            height: 24px; /* Ajusta el tamaño del círculo */
+            font-size: 1em;
+            margin: 0 3px;
+    }
+
+    .number {
+            width: 24px; /* Ancho fijo */
+            height: 24px; /* Alto fijo */
+            font-size: 0.6em ;
+            margin: 0 3px;
+    }
+
+    .marked-image {
+        width: 18px; /* Ajusta según el tamaño del número */
+        height: 18px; /* Ajusta según el tamaño del número */
+    }
+
+    .modal-image{
+        top: 5px;
+    }
+
+    .chao{
+        font-size: 20px;
+        width:200px;
+        margin-left: 100px;
+    }
+
+    .modal-button{
+        width: 80px;
+        height: 20px;
+        font-size: 0.5em;
+        padding: 0.2em;
+        border-radius: 4px;
+    }
+}
+
+/*para celulares medianos*/
+@media (max-width:920px){
+
+    .numeros{
+
+        width: 245px;
+        height: 390px;
+        margin: 5px 0px;
+    }
+    .bolitas{
+        margin: 0 2px;
+    }
+
+    .encimado2 {
+        left: 49%; /* Posicionado en el centro */
+    }
+
+    .h1{
+        bottom: -194px;
+        width: 245px;
+    }
+
+    .cartones{
+        margin-left: 28.3%;
+    }
+    
+    .comic-button{
+        margin-left: 198px;
+    }
+
+    .comic-button2{
+        margin-left: 290px;
+    }
+
+    h6{
+        margin-left: 125px;
+    }
+
+    .generador{
+        right: 15px;
+    }
+    
+    #botNamesContainer{
+        left: 270px;
+        bottom: 10px;
+        width: 366px;
+        height: 35px;
+    }
+
+    .img-bingo{
+        height: 300px;
+    }
+}
+
+@media (max-width:900px){
+
+    .numeros{
+
+        width: 245px;
+        margin: 5px 0px;
+    }
+    .bolitas{
+        margin: 0 2px;
+    }
+
+    .encimado2 {
+        left: 49%; /* Posicionado en el centro */
+    }
+
+    .h1{
+        bottom: -192px;
+        width: 245px;
+    }
+
+    .cartones{
+        margin-left: 28.3%;
+    }
+    
+    .comic-button{
+        margin-left: 198px;
+    }
+
+    .comic-button2{
+        margin-left: 290px;
+    }
+
+    h6{
+        margin-left: 125px;
+    }
+
+    .generador{
+        right: 14px;
+    }
+
+    #botNamesContainer{
+        left: 265px;
+        width: 360px;
+    }
+
+}
+
+@media (max-width:846px){
+
+    .generador{
+        right: 10px;
+    }
+
+    .numeros{
+        left: 5px;
+        height: 373px;
+    }
+
+    .cartones{
+        width: 320px;
+        height: 294px;
+        left: 16px;
+        top: 2px;
+    }
+
+    .encimado2{
+        top: 6px;
+        width: 325px;
+    }
+
+    .persona{
+        display: none;
+    }
+
+    h6{
+        margin-left: 60px;
+    }
+    
+    .comic-button{
+        margin-left: 140px;
+    }
+
+    .comic-button2{
+        margin-left: 240px;
+    }
+    
+    .h1{
+        bottom: -200px;
+    }
+
+    #botNamesContainer{
+        background-color: transparent;
+        width: 352px;
+        left: 245px;
+        bottom: 5px;
+    } 
+
+    .bot-container{
+        gap: 0px;
+        margin-bottom: 0px;
+    }
+
+    .img-bingo{
+        height: 261px;
+    }
+}
+
+@media (max-width:750px){
+    
+    .numeros{
+        display: none;
+        position: absolute;
+    }
+
+    .numeros2{
+        display: none; 
+    }
+
+    .encimado2{
+        display: none;
+    }
+
+    .cartones{
+        margin-left: 0;
+        margin-top: 9px;
+        width: 369px;
+        height: 348px;
+    }
+
+    #botNamesContainer{
+        background-color: #fc14148b;
+        width: 370px;
+        height: 45px;
+        left: 16px;
+        bottom: 12px;
+    } 
+
+    .generador{
+        right: 20px;
+    }
+    
+    .img-bingo{
+        height: 220px;
+    }
+
+    .comic-button3{
+        display: block;
+        position: fixed;
+        margin-left: -250px;
+        margin-bottom: -10px;
+        font-size: 0.5rem;
+    }
+
+    .number{
+        display: relative;
+        position: flex;
+    }
+}
+

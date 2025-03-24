@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+/* Estilo del fondo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../Multimedia/img/fondoo.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Quita el scroll */
+    height: 100vh; /* Ajusta la altura si es necesario */
+    width: 100%;
+}
+
+/* Container de perfil */
+.container {
+    background-image: url('../Multimedia/img/fondoGRIS.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-height: 400px; /* Agregado para asegurar altura mínima */
+}
+
+/* Estilo del encabezado de perfil */
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-image: url('../Multimedia/img/fondoAZUL.jpg');
+    margin-top: 13px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 34px;
+    text-align: center;
+}
+
+/* Título del perfil */
+.title {
+    font-size: 34px;
+    color: #fff;
+}
+
+/* Tamaño del logo SuperBingo */
+.loguito {
+    width: 70px;
+    height: 65px;
+}
+
+/* Estilos del botón para regresar */
+.back-btn, .profile-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Container de fondo */
+.player-info {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Nombre del jugador */
+.player-name {
+    font-size: 24px;
+    color: #000000;
+}
+
+/* ID y estado del jugador */
+.player-id, .status {
+    color: #000000;
+}
+
+/* Avatar */
+.avatar {
+    width: 70px;
+    height: 70px;
+    border: 2px solid #000000;
+    margin-bottom: 10px;
+    border-radius: 50% ;
+}
+
+/* Estilo de la barra de descripción */
+#email {
+    width: 99%;
+    height: 100px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Container del rango de victoria */
+.victory-range {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+
+/* Estilos de logros */
+.achievement-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.achievement img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.achievement p {
+    margin-top: 5px;
+    color: #555;
+}
+
+.comic-button {
+    display: inline-block;
+    padding: 8px ;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff5252;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position:flex;
+    margin-left: 0px;
+  }
+  
+  .comic-button:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: 2px solid #000000;
+    box-shadow: 5px 5px 0px #000000;
+  }
+  
+  .comic-button:active {
+    background-color: #fc1414;
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+
+  a{
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  /* General Button Styles */
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#openModalBtn {
+    margin: 20px;
+    font-size: 16px;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* Allow scrolling if content is too tall */
+}
+
+.modal-content {
+    background: url('../Multimedia/img/fondoAZUL.jpg') no-repeat center center;
+    background-size: cover;
+    margin: 4% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;  
+    max-width: 600px;
+    text-align: center;
+    border-radius: 10px;
+    overflow-y: auto; 
+    max-height: 80vh; 
+}
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 58px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Avatar grid */
+.avatars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    justify-items: center; 
+}
+
+.avatar {
+    text-align: center;
+}
+
+.avatar img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+.avatar-btn {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 120px;
+    transition: background-color 0.3s ease;
+}
+
+.avatar-btn:hover {
+    background-color: #45a049;
+}
+
+.avatar-btn.obtained {
+    background-color: gray;
+    pointer-events: none;
+}
+
+.btn{
+    background-color: transparent;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%; 
+        margin: 10% auto;
+        padding: 15px;
+    }
+
+    .avatar img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .avatar-btn {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .avatars-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /
+    }
+
+    .avatar img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .avatar-btn {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        overflow: hidden; /* Quita el scroll */
+        height: 100vh; /* Asegura que ocupe toda la pantalla */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .container {
+        width: 500px; /* Tamaño específico del contenedor */
+        height: 380px;
+        display: flex;
+        flex-direction: column; /* Los elementos se colocan en columnas */
+        justify-content: space-between; /* Distribuye el espacio entre los elementos */
+        align-items: center; /* Centra el contenido horizontalmente */
+        padding: 10px;
+        overflow: hidden; /* Asegura que no se desborde el contenido */
+    }
+
+    .header {
+        width: 100%; /* Asegura que el encabezado ocupe todo el ancho */
+        height: 50px; /* Altura fija */
+        font-size: 1em; /* Ajusta el tamaño del texto */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        background-color: rgba(0, 0, 0, 0.1); /* Fondo ligero */
+    }
+
+    .back-btn, .profile-btn {
+        font-size: 1em; /* Ajusta el tamaño del botón */
+        position: relative; /* Asegura que el botón se mantenga en el contenedor */
+    }
+
+    .title {
+        font-size: 1em; /* Ajusta el tamaño del título */
+        color: #fff;
+        margin-top: 0; /* Elimina el margen superior extra */
+    }
+
+    .loguito {
+        width: 40px;
+        height: 35px;
+    }
+
+    .avatar {
+        top: 5px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    .player-name, .player-id, .status {
+        font-size: 0.8em;
+        margin: 5px; /* Espacio pequeño entre los elementos */
+    }
+
+    .victory-range {
+        width: 430px;
+        padding: 10px;
+        margin-top: 10px;
+        height: 110px;
+    }
+
+    h2{
+        font-size: 1em;
+    }
+
+    p{
+        font-size: 0.6em;
+    }
+
+    .progress-bar {
+        width: 100%; /* Asegura que la barra de progreso ocupe todo el ancho */
+        background-color: #ddd;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .progress {
+        background-color: #28a745;
+        text-align: center;
+        color: white;
+        line-height: 1px;
+    }
+
+    .achievement-list {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .achievement {
+        text-align: center;
+    }
+
+    .achievement img {
+        width: 40px;
+        height: 40px;
+        margin: 0 20px;
+        border-radius: 10px;
+    }
+
+    .comic-button {
+        display: inline-block;
+        padding: 5px ;
+        height: 30px;
+        width: 30px;
+        font-size: 8px;
+        border-radius: 7px;
+    }
+    
+}
+

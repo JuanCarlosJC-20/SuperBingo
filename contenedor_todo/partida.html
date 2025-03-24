@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fronted/publico/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./Estilos/partida.css">
+    <link rel="icon" type="image/png" href="./Multimedia/img/logoSuperBingo-remejorado.png">
+    <title>superBingo</title>
+</head>
+<body>
+    <!-- el encabezado de la iamgen de Bingo -->
+    <header class="encimado2">
+        <img src="./Multimedia/img/bingoimagen.png" width="100%"   alt="Bingo Imagen">
+    </header>
+
+        <header class="encimado">
+        <img src="./Multimedia/img/bingoimagen.png" width="100%"  height="300px" alt="Bingo Imagen">
+    </header>
+
+    <!-- Contenedor padre que lleva las funciones del juego -->
+    <div class="contenedor">
+        <!-- Container que contiene el cartón de bingo -->
+        <div class="cartones">
+            <div class="detalles">
+                <p class="persona"><span id="nombreusuario"></span></p>
+                <div class="avatar"></div>
+                <div class="splas"></div>
+                <div class="premio">
+                    <h6>premio:</h6>
+                </div>
+                <button class="comic-button" onclick="confirmExit()"> 
+                    <a href="#">salir de la partida</a>
+                </button>
+
+                <button class="comic-button2" onclick="checkBingo()">BINGO !!</button> <!-- Llamar a la función de validación -->
+            </div>
+             
+            <button class="comic-button3"  onclick="mostrarContainer()">Ver listado de numeros</button>
+            
+            <div class="bingo-card" id="bingoCard">
+                <!-- Cabecera con las letras BINGO -->
+                <div class="header">B</div>
+                <div class="header">I</div>
+                <div class="header">N</div>
+                <div class="header">G</div>
+                <div class="header">O</div>
+                <!-- Aquí se generarán los números -->
+            </div>
+        </div>
+
+        <!-- Generador de números -->
+        <div class="generador">
+            <head id="fondo">
+                <h1>Generador de números</h1>
+            </head>
+            <div id="bingoContainer">
+                <div id="bingoBall" class="bingo-ball">
+                    <div id="circle">
+                        <div id="bingoLetter" class="bingo-letter"></div>
+                        <div id="bingoNumber" class="bingo-number"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="message"></div>
+            
+        <!-- Imagen adicional -->
+        <div class="img-bingo">
+            <img src="./Multimedia/img/SuperBingoCompleto.png" width="100%" height="100%" alt="logo">
+        </div>
+
+         <!-- Números mostrados  de pantallas diminutas-->
+ <div id="nn" class="numeros">
+    <head id="fondo"><h1 class="h1">Números mostrados</h1></head>
+    <div class="b">
+        <div class="bolitas">B</div>
+    </div>
+    <div class="i">
+        <div class="bolitas">I</div>
+    </div>
+    <div class="n">
+        <div class="bolitas">N</div>
+    </div>
+    <div class="g">
+        <div class="bolitas">G</div>
+    </div>
+    <div class="o">
+        <div class="bolitas">O</div>
+    </div>
+</div>
+</div>
+
+        <!-- Números mostrados -->
+        <div class="numeros2">
+            <head id="fondo"><h1 class="h1">Números mostrados</h1></head>
+            <div class="b">
+                <div class="bolitas">B</div>
+            </div>
+            <div class="i">
+                <div class="bolitas">I</div>
+            </div>
+            <div class="n">
+                <div class="bolitas">N</div>
+            </div>
+            <div class="g">
+                <div class="bolitas">G</div>
+            </div>
+            <div class="o">
+                <div class="bolitas">O</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmacion de salir de partida -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <img src="./Multimedia/img/viñeta.png" alt="Confirmación" class="modal-image">
+            <h2 class="chao">¿Estás seguro de que deseas salir de la partida?</h2>
+            <div class="modal-buttons">
+                
+                <button class="modal-button modal-button-confirm">
+                    <a href="./home.html">Confirmar</a>
+                </button>
+
+                <button class="modal-button modal-button-cancel"
+                onclick="closeModal()"><a href="">Cancelar</a>
+                </button>
+             </div>
+        </div>
+    </div>
+ 
+    <!-- Modal de validación de Bingo -->
+    <div id="validationModal" class="modal">
+        <div class="modal-content">
+            <img src="./Multimedia/img/viñeta.png" alt="Confirmación" class="modal-image2">
+            <pre id="modal-message"></pre>
+            <button  class="comic-button4" id="continue-playing" onclick="closeModal()">Continuar</button>
+            <button  class="comic-button4" id="claim-reward" style="display: none;">Reclamar</button>
+        </div>
+    </div>
+
+
+    <!-- Botón para verificar Bingo -->
+<button id="checkBingoButton"  class="vereficar">Verificar Bingo</button>
+
+<!-- Modal para mostrar el mensaje -->
+<div id="validationModal" style="display:none;">
+    <div class="modal2-content">
+        <pre id="modal2-message"></pre>
+        <button class="comic-button4" id="claim-reward" style="display:none;">Reclamar</button>
+        <button class="comic-button4" onclick="closeModal()">Seguir Jugando</button>
+    </div>
+</div>
+
+<!-- bots-->
+<div id="botNamesContainer" class="bot-container"></div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./escripts/partida.js"></script>
+    <script src="./escripts/datos.js"></script>
+</body>
+</html>

@@ -1,0 +1,612 @@
+*{
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Bangers', cursive;
+    background: url('../Multimedia/img/fondoo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+
+}
+
+.overlay {
+    background: rgba(255, 255, 255, 0.1);
+    height: 100%;
+    width: 100%;
+}
+
+.d{
+    background-color: #00000069;
+}
+
+/*iconos tuerca*/
+.icono {
+    width: 50px;
+    height: 50px;
+}
+
+/* Contenedor del logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 40px; /* Espacio alrededor del logo si es necesario */
+}
+
+/*estilos perfil*/
+.container {
+    position: relative;
+    width: 200px;
+    left:  45px;
+    top: 10px;
+}
+/*conteiner de la img*/
+.containerImg{
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 200px;
+    margin-left: -12px ;
+}
+
+/*estilo avatr del perfil*/
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: solid 2px #000000;
+}
+
+/*contenerdor de la pantalla plegable*/
+.menu {
+    display: none;
+    position: absolute;
+    top: 105px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+/*campos de color gris */
+.menu-item {
+    padding: 10px;
+    text-align: center;
+    background-color: #d3d3d3;
+    border-radius: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #c0c0c0;
+}
+
+/* Estilo para la imagen del logo */
+.logo {
+    position: relative;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    width: 500px;  /* Mantiene la proporción de la imagen */
+    filter:drop-shadow(1px 1px 20px rgb(255, 154, 1));
+    margin-top: -70px;
+}
+
+/* Ajuste del container-fluid con transparencia */
+.container-fluid {
+    margin-top: 95px;
+    width: 80%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.8); /* Añadir transparencia */
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+/*estilos de la mochila de inventario */
+.inventario{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 170px;
+    top: 10px;
+}
+
+/*recompenza diarias */
+.regalito{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    left: 150px;
+    top: 4px;
+}
+
+
+/* moneda del juego*/
+.bingoConins{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 22px;
+    left: 340px;
+}
+
+/* contenedor donde van a estar gurdado os datos de la cantida de monedas q tiene*/
+.dinero{
+    position: fixed;
+    border: solid #000000 3px;
+    background-color: #c0c0c0e1;
+    width: 140px;
+    height: 50px;
+    top: 20px;
+    left: 250px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
+    
+}
+
+.button-container{
+    display: flex;
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+    gap: 40px;
+    margin-left: 0;
+    bottom: 100px;
+    width: 100%;
+}
+
+.comic-button {
+    display: inline-block;
+    padding: 10px 12px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff5252;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position:flex;
+    margin-left: 20px;
+    bottom: 50px ;
+  }
+  
+  .comic-button:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: 2px solid #000000;
+    box-shadow: 5px 5px 0px #000000;
+  }
+  
+  .comic-button:active {
+    background-color: #fc1414;
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+
+
+.a{
+    background-color: transparent;
+    border: transparent;
+}
+
+.y{
+    background-color:  transparent;
+    border: none;
+}
+
+/* perfil de usuario estilos*/
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+    
+   margin-left: 30px;
+    
+    
+}
+
+
+.profile-dropdown-content {
+    display: none;
+    position: absolute;
+    
+    background-color: #00000069;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+    background-color: #ffffff;
+   
+}
+
+.profile-dropdown-content a {
+    color: rgb(0, 0, 0);
+    margin-left: 30px;
+    padding: 4px 15px;
+    text-decoration: none;
+    
+    display: block;
+   
+    border: 2px solid black;
+    background-color:  #9E9C9CBF;
+    border-radius: 10px
+    ;
+}
+
+
+.profile-dropdown-content a:hover {background-color: #caab43}
+
+.profile-dropdown:hover .profile-dropdown-content {
+    display: block;
+}
+
+.profile-dropdown:hover .dropbtn {
+    background-color: #ffffff;
+}
+
+.container{
+    margin-left: -35px;
+    margin-top: -10px;
+}
+
+
+/* estilo del botn sonido*/
+#soundButton {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding-bottom: 30px;
+   padding-top: 10px;
+}
+#soundIcon{
+    width: 50px;  /* Mantiene la proporción de la imagen */   
+}
+
+
+/* estilos del boton configuracion*/
+.ajuste-sonido{
+  right: 40px;
+  width: 60px;
+  height: 50px;
+  top: 15px;
+  position: fixed;
+  background-color: transparent;
+
+  
+}
+
+#volume-control {
+   display: none; 
+   width: 250px;
+   height: 310px;
+   padding-left: 10px;
+   right: 20px;
+   position: fixed;
+   border: rgb(0, 0, 0) solid 2px;
+   background-color: #c0c0c0;
+   border-radius: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0); 
+}
+
+/* estilos boton de configuracion*/ 
+.switch {
+    --input-focus: #2d8cf0;
+    --bg-color: #fff;
+    --bg-color-alt: #666;
+    --main-color: #323232;
+    --input-out-of-focus: #ccc;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 70px;
+    height: 36px;
+    transform: translateX(calc(50% - 10px));
+  }
+  
+  .toggle {
+    opacity: 0;
+  }
+  
+  .slider {
+    box-sizing: border-box;
+    border-radius: 100px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--input-out-of-focus);
+    transition: 0.3s;
+  }
+  
+  .slider:before {
+    content: "off";
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 2px;
+    bottom: 1px;
+    border: 2px solid var(--main-color);
+    border-radius: 100px;
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 25px;
+    transition: 0.3s;
+  }
+  
+  .toggle:checked + .slider {
+    background-color: var(--input-focus);
+    transform: translateX(-32px);
+  }
+  
+  .toggle:checked + .slider:before {
+    content: "on";
+    transform: translateX(32px);
+  }
+
+/* Estilos generales para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: fixed;
+    background-color: rgb(229, 227, 224);
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 1600px;
+    height: 700px;
+    margin: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+.cuadros1{
+    position: fixed;
+    border: #000 solid 2px;
+    margin: 5px;
+    width: 380px;
+    height: 280px;
+}
+
+.img-1{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.cuadros2{
+    border: #000 solid 2px;
+    margin: 5px;
+    width: 250px;
+    height: 280px;
+    margin-left: 405px;
+    margin-top: 25px;
+}
+
+.img-2{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.cuadros3{
+    border: #000 solid 2px;
+    width: 480px;
+    height: 280px;
+    margin-left: 674px;
+    margin-top: -288px;
+}
+
+.img-3{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.cuadros4{
+    border: #000 solid 2px;
+    width: 480px;
+    height: 280px;
+    margin-left: 5px;
+    margin-top: 15px;
+    
+}
+
+.cuadros5{
+    border: #000 solid 2px;
+    width: 315px;
+    height: 280px;
+    margin-left: 505px;
+    margin-top: -283px;
+}
+
+.cuadros6{
+    border: #000 solid 2px;
+    width: 315px;
+    height: 280px;
+    margin-left: 840px;
+    margin-top: -283px;
+}
+
+.cuadros7{
+    border: #000 solid 2px;
+    width: 405px;
+    height: 580px;
+    margin-left: 1178px;
+    margin-top: -582px;
+}
+
+@media (max-width: 999px) {
+
+    body{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .containerImg{
+        background-color: transparent;
+        width: 100px;
+        left: -10px;
+    }
+
+    .profile-img{
+        width: 55px;
+        height: 55px;
+        left: 10px;
+    }
+    
+    .menu{
+        width: 120px;
+        top: 80px;
+    }
+
+    .menu-item{
+        height: 15px;
+        font-size: 0.6em;
+    }
+
+    .regalito{
+        width: 70px;
+        height: 70px;
+        left: 85px;
+    }
+
+    .bingoConins{
+        left: 150px;
+        width: 40px;
+        height: 40px;
+        top: 18px;
+   }
+
+   .dinero{
+    left: 150px;
+    height: 40px;
+    top: 17px;
+    border: #000 solid 2px;
+    border-radius: 19px;
+}
+
+    .logo{
+        width: 220px;
+        height: 210px;
+        margin-bottom: 300px;
+    }
+    
+    .logo-container{
+        position: fixed;
+        justify-items: center;
+        align-content: center;
+        left: 40%;
+        top:70%;
+        width: 200px;
+        height: 190px;
+        padding: 0;
+        
+    }
+    
+    .button-container{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        gap:10px;
+        position: fixed;
+        bottom: 40px;
+
+    }
+
+    .comic-button{
+        width: 120px;
+        height: 40px;
+        font-size: 0.8em;
+        padding: 4px;
+        border-radius: 6px;
+    }
+
+    /* estilos del boton configuracion*/
+    .ajuste-sonido{
+        right: 40px;
+        width: 40px;
+        height: 50px;
+        top: 15px;
+        position: fixed;
+        background-color: transparent;
+    }
+  
+     #volume-control {
+        display: none; 
+        width: 180px;
+        height: 240px;
+        padding-left: none;
+        right: 20px;
+        position: fixed;
+        border: rgb(0, 0, 0) solid 2px;
+        background-color: #c0c0c0;
+        border-radius: 40px;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.7em;
+  }
+  
+}
+
+#mensajeRecompensa {
+    color: #4CAF50; /* Verde para éxito */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}

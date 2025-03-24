@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperBingo - Iniciar Sesión</title>
+    <link href="/contenedor_todo/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Estilos/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./Multimedia/img/logoSuperBingo-remejorado.png">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h2>Cargando Super Bingo...</h2>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <video autoplay muted loop id="background-video">
+        <source src="./Multimedia/img/fondo login.mp4" type="video/mp4">
+    </video>
+    
+    <div class="content">
+        <div class="login-container">
+            <img src="./Multimedia/img/logoSuperBingo-remejorado.png" class="logo" alt="">
+            <!-- Formulario de inicio de sesión -->
+            <form action="./Back_PHP/Validar_Usuario.php" method="POST">
+                <label for="username" class="letra">Usuario</label>
+                <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
+                
+                <label for="password" class="letra">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+    
+                <a href="./recuperar_contraseña.html" class="forgot-password" id="olvidaste">¿Olvidaste tu contraseña?</a>
+
+                <input id="colores" type="submit" value="Iniciar">
+            </form>
+            
+            <a href="./loginRegistro.html">
+                <div class="orgot-password">
+                    <p>¿No tienes una cuenta? Regístrate aquí.</p>
+                </div>   
+            </a>
+        </div>
+    </div>
+
+    <img src="./Multimedia/img/Super Bingo.png" class="superBingoCp" alt="">
+
+    <script src="/contenedor_todo/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./escripts/login.js"></script>
+</body>
+</html>
